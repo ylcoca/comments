@@ -11,8 +11,8 @@ Fork this repo into your github account.
 When you are done please send us your repo link.
 
 ## Your task
-You will notice the project contains the same app implemented in 3 different JS frameworks.
-Your goal is to implement the following Feature. You can choose to do it in one or multiple frameworks.
+You will notice the project contains the app implemented in Angular JS framework.
+Your goal is to implement the following Feature.
 
 ### Feature – Comment-TimeLapse
 We are going to build component that displays how long ago was the comment posted.
@@ -49,4 +49,4 @@ Please make sure to push your branch to github and send us the link
     npm install
 
 ### Running App
-Now choose the folder by framework's name and just follow the corresponding README file instructions located in each folder.
+Now follow the corresponding README file instructions under the framework -angular- folder.
