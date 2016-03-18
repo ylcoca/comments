@@ -1,0 +1,23 @@
+{
+  "name": "comments",
+  "homepage": "https://github.com/ylcoca/comments",
+  "authors": [
+    "Yader <ylcoca@gmail.com>"
+  ],
+  "description": "comments exercise",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "comments"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
