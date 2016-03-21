@@ -24,47 +24,7 @@ angular.module('commentBox', ['commentList', 'commentForm'])
         var loadCommentsFromServer = function () {
           var successCallback= function(response){
             scope.data=response.data;
-            var today=  new Date();
-            for(var i=0;i<scope.data.length;i++){
-              if(scope.data[i].postDate==null||scope.data[i].postDate==""){
-                scope.data[i].postDate="";
-              }
-              else{
-               var postedOn=new Date(scope.data[i].postDate);
-               var result= today.getTime()-postedOn.getTime();
-
-                var resultInSeconds = Math.round(result / 1000);
-                var resultInMinutes = Math.round(result / 60000);
-                var resultInHours = Math.round(result / 3600000);
-                var resultInDays = Math.round(result / 86400000);
-                if(resultInSeconds<59){
-                  scope.data[i].postDate="1 minute ago";
-                }
-                else if(resultInSeconds>59 && resultInMinutes<59){
-                  if(resultInMinutes>1){
-                    scope.data[i].postDate=resultInMinutes+" minutes ago";
-                  }
-                }
-                else if(resultInMinutes>59 && resultInHours<24){
-                  if(resultInHours==1){
-                    scope.data[i].postDate=resultInHours+" hour ago";
-                  }
-                  else{
-                    scope.data[i].postDate=resultInHours+" hours ago";
-                  }
-
-                }
-                else if(resultInHours>24){
-                  if(resultInDays==1){
-                    scope.data[i].postDate=resultInDays+" day ago";
-                  }else{
-                    scope.data[i].postDate=resultInDays+" days ago";
-                  }
-
-                }
-              }
-            }
-           // $log.info(date);
+            
             console.log('success')
           };
           var errorCallback=function(data, status, headers, config){
