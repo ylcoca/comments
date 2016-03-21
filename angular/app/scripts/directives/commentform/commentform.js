@@ -19,7 +19,8 @@ angular.module('commentForm', [])
         scope.comment = {};
         scope.submitComment = function(){
           var comment = scope.comment;
-          if (!comment.msg || !comment.author) {
+          comment.postDate= new Date();
+          if (!comment.msg || !comment.author|| !comment.postDate) {
             return;
           }
           scope.$emit('submitted', comment);
