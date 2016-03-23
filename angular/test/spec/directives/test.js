@@ -12,7 +12,7 @@ describe('angularApp', function () {
 
   it('result pass', function () {
 
-    expect(1 + 1).toEqual(3);
+    expect(1 + 1).toEqual(2);
   });
 
 

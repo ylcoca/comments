@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: comment', function () {
+fdescribe('Directive: comment', function () {
 
   // load the directive's module
   beforeEach(module('commentList'));
@@ -11,6 +11,17 @@ describe('Directive: comment', function () {
     scope = $rootScope.$new();
     compile = $compile;
   }));
+
+  it('should render the appropriate time', function (){
+    var comments = [
+      {'author': 'yader', 'msg': 'Msg 1', id: 1,postDate:'2016-03-18T04:21:00.857Z'}
+    ];
+    scope.comments = comments;
+    element = angular.element('<comment-list comments="comments"></comment-list>');
+    element = compile(element)(scope);
+    scope.$digest();
+    expect(element.find('small').text()).toBe('6 days ago');
+  });
 
   it('should render the comments', function (){
     var comments = [
