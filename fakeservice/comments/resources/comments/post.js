@@ -1,0 +1,1 @@
+this.postDate = new Date();
